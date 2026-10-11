@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#100d2b">
+<title>For Ishu ✨ | A Little Birthday Universe</title>
+<style>
+:root{--night:#100d2b;--violet:#9b7bff;--pink:#ff9ed8;--gold:#ffe3a6;--white:#fff9ff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--white);font-family:Georgia,"Times New Roman",serif;background:radial-gradient(ellipse at 50% 10%,#35246b 0%,#17123c 40%,#090817 100%);min-height:100vh;overflow-x:hidden}
+button{font:inherit;cursor:pointer}
+.sky,.sparkles{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.star{position:absolute;width:2px;height:2px;background:#fff;border-radius:50%;opacity:.8;animation:twinkle 2.6s infinite ease-in-out alternate}
+@keyframes twinkle{to{opacity:.18;transform:scale(.5)}}
+.moon{position:fixed;top:7%;right:9%;width:68px;height:68px;border-radius:50%;background:#fff3cb;box-shadow:0 0 35px #ffe8ad,0 0 90px #b7a0ff;opacity:.9}
+.moon:after{content:"";position:absolute;left:20px;top:-5px;width:65px;height:65px;border-radius:50%;background:#29205a}
+main{position:relative;z-index:1}
+section{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:36px 18px;text-align:center}
+.panel{width:min(720px,100%);padding:clamp(24px,6vw,54px) clamp(18px,5vw,44px);border:1px solid #ffffff35;border-radius:28px;background:linear-gradient(145deg,#ffffff12,#ffffff05);box-shadow:0 20px 90px #0005;backdrop-filter:blur(10px)}
+.eyebrow{letter-spacing:.25em;text-transform:uppercase;color:#d9caff;font:11px Arial,sans-serif}
+h1{font-size:clamp(2.7rem,10vw,5.6rem);line-height:.98;margin:20px 0;background:linear-gradient(110deg,#fff8df,#ffb7e6 45%,#c5b4ff 85%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 38px #bba4ff24}
+h2{font-size:clamp(2rem,7vw,3.4rem);margin:0 0 16px;color:#ffe9f7}
+p{font-size:clamp(1rem,3vw,1.2rem);line-height:1.8;color:#eee7ff}
+button.primary{border:0;border-radius:999px;padding:14px 25px;margin-top:14px;color:#21143b;background:linear-gradient(100deg,#ffe5ad,#ffb8e5,#c9baff);box-shadow:0 8px 35px #d9a7ff35;transition:transform .2s}
+button.primary:hover{transform:translateY(-2px) scale(1.02)}
+.small{font:12px Arial,sans-serif;color:#c7bee8}
+.cake-wrap{margin:28px auto 18px;position:relative;width:210px;height:190px}
+.cake{position:absolute;bottom:12px;left:25px;width:160px;height:88px;border-radius:14px 14px 22px 22px;background:linear-gradient(#ffb9dc 0 22%,#fff1f8 22% 34%,#bd8bff 34% 70%,#f5c2e7 70%);box-shadow:inset 0 -10px 0 #8e5fc4,0 15px 25px #0004}
+.cake:before{content:"";position:absolute;top:-19px;left:0;width:160px;height:37px;border-radius:50%;background:#fff0f8;border-bottom:7px solid #ffadd7}
+.cake:after{content:"";position:absolute;top:20px;left:20px;width:120px;height:8px;border-radius:10px;background:#fff9}
+.candle{position:absolute;bottom:110px;left:99px;width:12px;height:42px;border-radius:4px;background:repeating-linear-gradient(45deg,#fff 0 5px,#f7a6d5 5px 10px)}
+.flame{position:absolute;left:97px;bottom:151px;width:17px;height:25px;background:radial-gradient(ellipse at 50% 70%,#fff7b5 0 25%,#ffb33f 45%,#ff6f9f 75%);border-radius:60% 40% 60% 40%;transform:rotate(8deg);filter:drop-shadow(0 0 12px #ffc55b);animation:flicker .6s infinite alternate}
+@keyframes flicker{to{transform:rotate(-9deg) scale(.88);opacity:.8}}
+.gift{font-size:4.5rem;filter:drop-shadow(0 0 20px #ffacd9);animation:bob 2.5s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-10px) rotate(2deg)}}
+.hidden{display:none!important}
+.reasons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:24px 0}
+.reason{border:1px solid #ffffff26;background:#ffffff0c;border-radius:14px;padding:15px 10px;color:#ffe3f4;font-size:1rem}
+.letter{font-style:italic;white-space:pre-line}
+footer{padding:24px;text-align:center;color:#aaa0ce;font:11px Arial,sans-serif}
+.heart{position:fixed;bottom:-30px;z-index:5;pointer-events:none;animation:floatUp 5s linear forwards}
+@keyframes floatUp{to{transform:translateY(-110vh) rotate(35deg);opacity:0}}
+@media(max-width:420px){.moon{width:46px;height:46px;right:7%;top:4%}.moon:after{width:44px;height:44px;left:15px}.reasons{grid-template-columns:1fr 1fr}.reason{font-size:.9rem}}
+</style>
+</head>
+<body>
+<div class="sky" id="sky"></div><div class="moon" aria-hidden="true"></div>
+<main>
+<section id="welcome">
+ <div class="panel">
+  <div class="eyebrow">a tiny universe, made just for you</div>
+  <h1>For my<br>sweet Ishu ✨</h1>
+  <p>Tonight, the stars have a little secret…<br>and it has your name written all over it.</p>
+  <button class="primary" onclick="begin()">Open your little surprise ♡</button>
+  <p class="small">Turn your sound on for the cutest little birthday tune.</p>
+ </div>
+</section>
+<section id="birthday">
+ <div class="panel">
+  <div class="eyebrow">the universe is celebrating you</div>
+  <h1>Happy 18th<br>Birthday, Liza!</h1>
+  <p>To the girl who makes ordinary days feel a little more magical. May this new chapter bring you gentle happiness, brave dreams, and a thousand reasons to smile.</p>
+  <div class="cake-wrap" aria-label="animated birthday cake"><div class="flame"></div><div class="candle"></div><div class="cake"></div></div>
+  <button class="primary" onclick="blow()">Make a wish & blow the candle ✨</button>
+  <p id="wish" class="small"></p>
+  <button class="primary" onclick="go('reasons')">One more little thing… →</button>
+ </div>
+</section>
+<section id="reasons">
+ <div class="panel">
+  <div class="eyebrow">12 little reminders</div><h2>Things that make you special 💗</h2>
+  <div class="reasons">
+   <div class="reason">Your lovely smile ✨</div><div class="reason">Your kind heart 🌷</div>
+   <div class="reason">Your little laugh 🎀</div><div class="reason">Your unique magic 🌙</div>
+   <div class="reason">The way you care 💞</div><div class="reason">Your brave dreams ⭐</div>
+   <div class="reason">Your sweet energy 🦋</div><div class="reason">Your honest heart 💌</div>
+   <div class="reason">Your lovely spirit 🌸</div><div class="reason">Your tiny quirks ☁️</div>
+   <div class="reason">Your growing courage 🌟</div><div class="reason">Simply being you 💖</div>
+  </div>
+  <button class="primary" onclick="go('letter')">Open your letter 💌</button>
+ </div>
+</section>
+<section id="letter">
+ <div class="panel">
+  <div class="eyebrow">just from me to you</div><div class="gift">💝</div>
+  <h2>Dear Ishu,</h2>
+  <p class="letter">Happy 18th birthday, my favourite person.
+
+I hope this new chapter of your life is filled with beautiful surprises, peaceful days, big dreams, and people who remind you how wonderful you are.
+
+Keep being your lovely self. Never forget that you deserve kindness, laughter, respect, and every good thing you work towards.
+
+No photo could hold all the little things that make you you, so I made you this tiny universe instead. I hope it makes you smile today.
+
+With lots of love,
+Your lovey ♡</p>
+  <button class="primary" onclick="finale()">Tap for a little birthday magic ✨</button>
+  <p id="finaleText" class="small"></p>
+  <button class="primary" onclick="go('welcome')">Replay the surprise ↺</button>
+ </div>
+</section>
+</main>
+<footer>Made with a little stardust, just for Liza ♡</footer>
+<script>
+const sky=document.getElementById('sky');
+for(let i=0;i<110;i++){let s=document.createElement('i');s.className='star';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDelay=(Math.random()*3)+'s';s.style.animationDuration=(1.4+Math.random()*2.8)+'s';s.style.opacity=(.2+Math.random()*.8);sky.appendChild(s)}
+function go(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
+let audioCtx=null, musicTimer=null, musicOn=false;
+function playTune(){
+ try{
+  audioCtx=audioCtx||new(window.AudioContext||window.webkitAudioContext)();
+  if(audioCtx.state==='suspended')audioCtx.resume();
+  musicOn=true;
+  // Original, gentle bell-like notes generated in-browser; no external audio files.
+  const notes=[659,784,988,784,880,1047,988,784,659,784,880,784];
+  let i=0;
+  function note(){if(!musicOn)return;const t=audioCtx.currentTime;const o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type='sine';o.frequency.value=notes[i%notes.length];g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.07,t+.03);g.gain.exponentialRampToValueAtTime(.0001,t+.36);o.connect(g);g.connect(audioCtx.destination);o.start(t);o.stop(t+.4);i++;musicTimer=setTimeout(note,420)}
+  note();
+ }catch(e){}
+}
+function begin(){playTune();go('birthday');hearts(18)}
+function blow(){document.querySelector('.flame').style.display='none';document.getElementById('wish').textContent='Wish sent to the stars! May something beautiful find you this year. 🌠';hearts(22)}
+function hearts(n=12){const icons=['♡','💗','✨','💖','🌟'];for(let i=0;i<n;i++){const h=document.createElement('div');h.className='heart';h.textContent=icons[Math.floor(Math.random()*icons.length)];h.style.left=Math.random()*100+'%';h.style.fontSize=(16+Math.random()*24)+'px';h.style.animationDuration=(3.5+Math.random()*3)+'s';document.body.appendChild(h);setTimeout(()=>h.remove(),7000)}}
+function finale(){document.getElementById('finaleText').textContent='You are someone worth celebrating—not just today, but all year long. Happy birthday, Ishu! 💫';hearts(35)}
+</script>
+</body>
+</html>
